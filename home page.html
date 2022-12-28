@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {
+  box-sizing: border-box;
+  padding: 7px;
+  margin: 5px;
+}
+
+
+.column {
+  border: 2px solid black;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  
+  
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 5px;
+  
+}
+ 
+ 
+</style>
+</head>
+<body>
+    
+        <div class="column" id="column1" style="background-color:rgb(255, 196, 0);">
+          <h2>Column 1</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ducimus!</p>
+        </div>
+
+        <div class="column" id="column2" style="background-color:aqua;">
+          <h2></h2>
+          <p></p>
+        </div>
+     
+
+      <button onclick="onf()">on</button>
+      <button onclick="offN()">off</button>
+
+      <script>
+        function onf(){
+          var abc = document.getElementById("column1") ;
+          var xyz = document.getElementById("column2");
+          xyz.innerHTML = abc.innerHTML; 
+          abc.innerHTML = ''; 
+
+        }
+        function offN(){
+          var abc = document.getElementById("column1") ;
+          var xyz = document.getElementById("column2");
+          abc.innerHTML = xyz.innerHTML; 
+          xyz.innerHTML = ''; 
+
+        }
+        
+
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<div id="form1"  style="border: 2px solid black ; width: 275px; background-color:rgb(192, 255, 242);">
+    <form name="userForm" action="" method="post">
+    Name : <input type="text" value="" id="name" name="name"  >
+    <div id="name_error" style="color: red;"></div>
+    </br>
+    age : <input type="text" value="" id="age" name="age" >
+    <div id="age_error" style="color: red;"></div>
+    </br>
+    phone : <input type="text" value="" id="phone" name="phone" >
+    <div id="phone_error" style="color: red;"></div>
+    </br>
+    
+    <input type="button" value="sunmit" onclick="formSubmit()" >
+    </form>
+    </div>
+    
+        <button onclick="form1()">go to sec</button>
+        
+    <script>
+
+
+        function formSubmit(){
+            var name = document.querySelector('input#name').value;
+            var age = document.querySelector('input#age').value;
+            var phone = document.querySelector('input#phone').value;
+            temp = true;
+           if(!name){
+            temp = false;
+               document.getElementById('name_error').innerHTML ='Please enter your name';
+               setTimeout(function hideerror(){
+                document.getElementById('name_error').innerHTML ='';
+               },5000)
+           }else{
+            document.getElementById('name_error').innerHTML ='';
+           }
+          
+           if(!age){
+            temp = false;
+               document.getElementById('age_error').innerHTML ='Please enter your age';
+           }else{
+            if(isNaN(age)){
+                temp = false;
+                document.getElementById('age_error').innerHTML ='age should be ';
+            }else{
+                document.getElementById('age_error').innerHTML ='';
+            }
+           }
+           if(!phone){
+            temp = false;
+               document.getElementById('phone_error').innerHTML ='Please enter your phone number';
+           }else{
+            document.getElementById('phone_error').innerHTML ='';
+           }
+    
+           if(temp==true){
+            alert("Submitted");
+           }
+           
+        }
+    </script>
+    
+    
+    <div id="form1"  style="border: 2px solid black ; width: 275px; background-color:rgb(192, 212, 255);">
+    <form name="userForm" action="" method="post">
+        Name : <input type="text" value="" id="name" name="name"  >
+        <div id="name_error" style="color: red;"></div>
+        </br>
+        age : <input type="text" value="" id="age" name="age" >
+        <div id="age_error" style="color: red;"></div>
+        </br>
+        phone : <input type="text" value="" id="phone" name="phone" >
+        <div id="phone_error" style="color: red;"></div>
+        </br>
+        
+        <input type="button" value="sunmit" onclick="formSubmit()" >
+        </form>
+    </div>
+    
+    <button onclick="form2()">go to first</button>
+        <script>
+            function formSubmit(){
+                var name = document.querySelector('input#name').value;
+                var age = document.querySelector('input#age').value;
+                var phone = document.querySelector('input#phone').value;
+                temp = true;
+               if(!name){
+                temp = false; 
+                   document.getElementById('name_error').innerHTML ='Please enter your name';
+                   setTimeout(function hideerror(){ 
+                    document.getElementById('name_error').innerHTML ='';
+                    
+                
+                   },5000)
+               }else{ 
+                 
+                document.getElementById('name_error').innerHTML ='';
+               }
+              
+               if(!age){
+                temp = false; 
+                   document.getElementById('age_error').innerHTML ='Please enter your age';
+               }else{ 
+                if(isNaN(age)){
+                    temp = false;
+                    document.getElementById('age_error').innerHTML ='age should be ';
+                }else{
+                    document.getElementById('age_error').innerHTML ='';
+                }
+               }
+               if(!phone){
+                temp = false;
+                   document.getElementById('phone_error').innerHTML ='Please enter your phone number';
+               }else{
+                document.getElementById('phone_error').innerHTML ='';
+               }
+        
+               if(temp==true){
+                alert("Submitted");
+               }
+               
+            }
+        </script>

@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="changeCountry(event)">
+        <option value="">Select India</option>
+        <option value="1">India</option>
+        <option value="2">Canada</option>
+        <option value="3">saudi Arabia</option>
+    </select>
+    
+    <select onchange="changestate(event)" id="stateId">
+        <option value="">Select state</option>
+        <option value="1">rajsthan</option>
+        <option value="2">canada</option>
+    </select>
+
+    <select onchange="changecity(event)">
+        <option value="">Select city</option>
+        <option value="1">jaipur</option>
+        <option value="2">jodhpur</option>
+    </select>
+    <script>
+        var ststen = ['rajasthan', 'punjab', 'delhi'];
+        var ststenCn = ['toronto', 'ottawa', 'edmonton'];
+        var ststensa =['medina','mecca','muzahmiyya'];
+        // var rajasthanCities = 
+        function changeCountry(event){
+            var country = event.target.value;
+            var statelist = '';
+            if(country==1){
+                ststen.forEach((v, k) => {
+                    statelist  += '<option value="' + k + '">' + v +'</option>';
+                })
+            }
+            if(country ==2){ 
+                ststenCn.forEach((v, k) => {
+                    statelist  += '<option value="' + k + '">' + v +'</option>';
+                })
+            }
+           
+            
+
+           
+            var select = document.getElementById("stateId");
+            select.innerHTML = statelist;
+
+        }
+    </script>
+</body>
+</html>
